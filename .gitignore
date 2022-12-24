@@ -14,7 +14,7 @@ tsconfig.tsbuildinfo
 generated
 
 # misc
-.DS_Store
+.DS_Shop
 .cert
 .yalc
 yalc.lock

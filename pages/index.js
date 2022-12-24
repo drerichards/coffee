@@ -2,12 +2,12 @@ import Head from "next/head";
 import styles from "../styles/Home.module.css";
 import Banner from "../components/Banner";
 import Card from "../components/Card";
-import coffeeStores from "../data/coffee-stores.json";
+import coffeeShopsData from "../data/coffee-shops.json";
 
 export async function getStaticProps(context) {
   return {
     props: {
-      coffeeStores,
+      coffeeShops: coffeeShopsData,
     }, // will be passed to the page component as props
   };
 }
@@ -26,21 +26,21 @@ export default function Home(props) {
       <main className={styles.main}>
         <div className={styles.description}>
           <Banner
-            buttonText={"View stores nearby"}
+            buttonText={"View shops nearby"}
             handleOnClick={handleOnButtonClick}
           />
         </div>
-        {props.coffeeStores.length > 0 ? (
+        {props.coffeeShops.length > 0 ? (
           <>
             <h2 className={styles.heading2}>Atlanta Coffee Shops</h2>
             <div className={styles.cardLayout}>
-              {props.coffeeStores.map((stores) => {
+              {props.coffeeShops.map((shops) => {
                 return (
                   <Card
-                    key={stores.id}
-                    href={`/coffee-store/${stores.id}`}
-                    name={stores.name}
-                    imgUrl={stores.imgUrl}
+                    key={shops.id}
+                    href={`/coffee-shop/${shops.id}`}
+                    name={shops.name}
+                    imgUrl={shops.imgUrl}
                     className={styles.card}
                   />
                 );

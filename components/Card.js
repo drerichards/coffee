@@ -17,7 +17,7 @@ const Card = ({ href, name, imgUrl }) => {
             src={imgUrl}
             width={260}
             height={160}
-            alt={`${name}-coffee-store`}
+            alt={`${name}-coffee-shop`}
           />
         </div>
       </div>
