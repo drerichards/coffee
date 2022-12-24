@@ -3,13 +3,12 @@ import styles from "../styles/Home.module.css";
 import Banner from "../components/Banner";
 import Card from "../components/Card";
 import coffeeShopsData from "../data/coffee-shops.json";
-import cls from "classnames";
 
-export async function getStaticProps(context) {
+export async function getStaticProps() {
   return {
     props: {
       coffeeShops: coffeeShopsData,
-    }, // will be passed to the page component as props
+    },
   };
 }
 
@@ -24,7 +23,7 @@ export default function Home({ coffeeShops }) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div className="bgGlass">
+      <div className="bgImage">
         <main className={styles.main}>
           <div className={styles.description}>
             <Banner

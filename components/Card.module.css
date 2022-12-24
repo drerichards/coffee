@@ -4,13 +4,10 @@
     0 10px 10px -5px rgba(0, 0, 0, 0.04);
   box-shadow: 0 0 transparent, 0 0 #0000, 0 0 transparent, 0 0 #0000,
     0 0 transparent;
-
   border-color: var(--text-white-100);
-  border-radius: 0.75rem;
 }
 
 .container {
-  border-radius: 0.75rem;
   padding-top: 0.25rem;
   padding-bottom: 0.25rem;
   padding-bottom: 1.25rem;
@@ -25,7 +22,7 @@
 }
 
 .cardHeader {
-color: var(--text-white-100);
+  color: var(--text-white-100);
   text-overflow: ellipsis;
   white-space: nowrap;
   font-size: 1.25rem;
@@ -37,10 +34,6 @@ color: var(--text-white-100);
 
 .cardImageWrapper {
   color: var(--text-white-100);
-}
-
-.cardImage {
-  border-radius: 0.75rem;
 }
 
 @media (min-width: 1024px) {
