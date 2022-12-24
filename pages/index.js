@@ -3,6 +3,7 @@ import styles from "../styles/Home.module.css";
 import Banner from "../components/Banner";
 import Card from "../components/Card";
 import coffeeShopsData from "../data/coffee-shops.json";
+import cls from "classnames";
 
 export async function getStaticProps(context) {
   return {
@@ -12,7 +13,7 @@ export async function getStaticProps(context) {
   };
 }
 
-export default function Home(props) {
+export default function Home({ coffeeShops }) {
   const handleOnButtonClick = () => {};
 
   return (
@@ -23,34 +24,36 @@ export default function Home(props) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className={styles.main}>
-        <div className={styles.description}>
-          <Banner
-            buttonText={"View shops nearby"}
-            handleOnClick={handleOnButtonClick}
-          />
-        </div>
-        {props.coffeeShops.length > 0 ? (
-          <>
-            <h2 className={styles.heading2}>Atlanta Coffee Shops</h2>
-            <div className={styles.cardLayout}>
-              {props.coffeeShops.map((shops) => {
-                return (
-                  <Card
-                    key={shops.id}
-                    href={`/coffee-shop/${shops.id}`}
-                    name={shops.name}
-                    imgUrl={shops.imgUrl}
-                    className={styles.card}
-                  />
-                );
-              })}
-            </div>
-          </>
-        ) : (
-          <h2 className={styles.heading2}>Loading...</h2>
-        )}
-      </main>
+      <div className="bgGlass">
+        <main className={styles.main}>
+          <div className={styles.description}>
+            <Banner
+              buttonText={"View shops nearby"}
+              handleOnClick={handleOnButtonClick}
+            />
+          </div>
+          {coffeeShops.length > 0 ? (
+            <>
+              <h2 className={styles.heading2}>Atlanta Coffee Shops</h2>
+              <div className={styles.cardLayout}>
+                {coffeeShops.map((shops) => {
+                  return (
+                    <Card
+                      key={shops.id}
+                      href={`/coffee-shop/${shops.id}`}
+                      name={shops.name}
+                      imgUrl={shops.imgUrl}
+                      className={styles.card}
+                    />
+                  );
+                })}
+              </div>
+            </>
+          ) : (
+            <h2 className={styles.heading2}>Loading...</h2>
+          )}
+        </main>
+      </div>
     </>
   );
 }

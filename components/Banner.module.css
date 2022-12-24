@@ -7,7 +7,7 @@
 .title {
   letter-spacing: -0.025em;
   font-weight: 800;
-  font-size: 3rem /* 48px */;
+  font-size: 3rem;
   line-height: 1;
   display: flex;
   margin-bottom: 1rem;
@@ -25,8 +25,8 @@
 .subTitle {
   margin-top: 0.75rem;
   margin-bottom: 1rem;
-  font-size: 1.5rem /* 24px */;
-  line-height: 2rem /* 32px */;
+  font-size: 1.5rem;
+  line-height: 2rem;
 }
 
 .buttonWrapper {
@@ -41,12 +41,12 @@
   width: 16em;
   margin-top: 1em;
   color: #fff;
-  padding-top: 1rem /* 16px */;
-  padding-bottom: 1rem /* 16px */;
-  font-size: 1.125rem /* 18px */;
-  line-height: 1.75rem /* 28px */;
-  padding-left: 2.5rem /* 40px */;
-  padding-right: 2.5rem /* 40px */;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
 }
 
 .button:hover {
@@ -66,7 +66,7 @@
 /** sm breakpoint **/
 @media (min-width: 640px) {
   .title {
-    font-size: 3rem /* 48px */;
+    font-size: 3rem;
     line-height: 1;
   }
 
@@ -84,7 +84,7 @@
 /** md breakpoint **/
 @media (min-width: 768px) {
   .title {
-    font-size: 3.75rem /* 60px */;
+    font-size: 3.75rem;
     line-height: 1;
   }
 
@@ -93,12 +93,12 @@
   }
 
   .button {
-    padding-top: 1rem /* 16px */;
-    padding-bottom: 1rem /* 16px */;
-    font-size: 1.125rem /* 18px */;
-    line-height: 1.75rem /* 28px */;
-    padding-left: 2.5rem /* 40px */;
-    padding-right: 2.5rem /* 40px */;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
   }
 }
 
@@ -109,7 +109,7 @@
   }
 
   .title {
-    font-size: 4.5rem /* 72px */;
+    font-size: 4.5rem;
     line-height: 1;
   }
 
